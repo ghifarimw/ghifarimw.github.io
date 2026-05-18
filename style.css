@@ -61,6 +61,13 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+
+}
+.card p {
+    background-color: rgb(from var(--hv-color) r g b / 0.5);
+    border-radius: 20px;
+    padding: 2%;
 }
 h1 p {
     color: var(--mid-text);
