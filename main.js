@@ -1,10 +1,41 @@
+var MobileRes = false;
+function MobileCheck() {
+    console.log(window.innerHeight/window.innerWidth);
+    if ((window.innerHeight/window.innerWidth > 1) && (!MobileRes)) {
+        MobileRes = true;
+        var ch = document.querySelectorAll(".card");
+        ch.forEach((element) => {
+            element.style.setProperty("flex-direction","column");
+        });
+        document.getElementsByClassName("mp")[0].style.setProperty("flex-direction","column");
+        document.getElementsByClassName("mp")[0].style.setProperty("height","95vh");
+        document.getElementsByClassName("mp")[0].style.setProperty("text-align","center");
+        document.getElementsByClassName("control")[0].style.setProperty("display","none");
+        document.getElementsByClassName("love")[0].style.setProperty("display","none");
+        document.getElementById("face").style.setProperty("max-width","80%");
+        document.getElementById("title-p").style.setProperty("text-align","center");
+        document.getElementById("ttl").style.setProperty("width","100%");
+    } else if (MobileRes && (window.innerHeight/window.innerWidth <= 1)) {
+        MobileRes = false;
+        var ch = document.querySelectorAll(".card");
+        ch.forEach((element) => {
+            element.style.setProperty("flex-direction","row");
+        });
+        document.getElementsByClassName("mp")[0].style.setProperty("flex-direction","row");
+        document.getElementsByClassName("mp")[0].style.setProperty("height","100vh");
+        document.getElementsByClassName("mp")[0].style.setProperty("text-align","left");
+        document.getElementsByClassName("control")[0].style.setProperty("display","flex");
+        document.getElementsByClassName("love")[0].style.setProperty("display","inline");
+        document.getElementById("face").style.setProperty("max-width","55%");
+        document.getElementById("title-p").style.setProperty("text-align","left");
+        document.getElementById("ttl").style.setProperty("width","45%");
+    }
+}
+window.onload = function() {
+    MobileCheck();
+    if (window.location.hash) {
+        history.replaceState(null,"",window.location.pathname);
+    }
+};
+window.addEventListener('resize',MobileCheck);
 
-fetch('./acv.json')
-    .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok');
-        return response.json(); // Parses the JSON automatically
-    })
-    .then(data => {
-        console.log(data); // Use your JSON object here
-    })
-    .catch(error => console.error('Error loading JSON:', error));
