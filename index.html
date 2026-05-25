@@ -3,26 +3,24 @@
 <head>
     <meta charset="utf-8">
     <title>Ghifari's Portfolio</title>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
 </head>
 
 <body style="margin: 0px; background-color: var(--theme);">
     <div class="fixed-nav">
-        <a id="ttl" href="index.html" style="width: 45%; "><div id="title-p" style="text-align: left;">Ghifari's Portfolio. 👌</div></a>
+        <a id="ttl" href="index.html" style="width: 55%; "><div id="title-p" style="text-align: left;">Ghifari's Portfolio. 👌</div></a>
         <div class="control" style="width: 35%;">
             <a href="#profile">About</a>
             <a href="#acv">Achievements</a>
-            <a href="#socials">Socials</a>
             <a href="#projects">Projects</a>
-            <a href="#extras">Extras</a>
+            <a href="#socials">Socials</a>
         </div>
-        <div class="love" style="color: rgb(248, 224, 224); width: 5%; font-size: 12px; border-radius: 15px; padding: 6px;">Made with Love ❤❤</div>
+        <div class="love" style="color: rgb(248, 224, 224); width: 5%; font-size: 12px; border-radius: 15px; padding: 6px;">Made with Love ❤</div>
     </div>
     <div class="main-page">
-        <div class="mp">
-            <div style="width: 5%; height: 7vh;"></div>
+        <div class="mp" style="padding-top: 6vh;">
             <img class="hvr" id="face" src="assets/face.png" style="max-width: 55%;">
             
             <h1 class="hvr">
@@ -36,11 +34,20 @@
             <h1 id="profile" style="text-align: center; font-size: 50px; scroll-margin-top: 100px;">~ About Me ~</h1>
             <div class="card">
                 <div style="width: 10%;"></div>
-                <p class="glass hvr" style="white-space: pre-line; padding: 2%; text-align: justify;width: 80%;font-size: 30px;"> Hi, my name is Ghifari, I attend Wardaya high school in West Jakarta. I like programming, I like playing games, I watch F1, and I like to do some interesting stuff like robotics. 
-                    
-                    I play Geometry Dash, Project Sekai and Roblox a lot and I sometimes do codeforces contests (I have skill issue in Div 2).
-                    
-                    I used to participate in a lot of math competitions but now, I mostly do competitions in informatics.
+                <p class="glass hvr" style="white-space: pre-line; padding: 2%; text-align: justify;width: 80%;font-size: 30px;"> Hi, my name is Ghifari, I attend Wardaya high school in West Jakarta. I like programming, playing games, watching F1, and do some interesting stuff I guess. 
+
+                    What I normally do:
+                    - Play games
+                    - codeforces contests (sometimes)
+                    - Watch F1 (on race weekends)
+
+                    What I normally play:
+                    - Geometry Dash
+                    - Project Sekai
+                    - Roblox (sometimes)
+                    - Minecraft (sometimes)
+
+                    I used to participate in a lot of math competitions, but now I mostly focus on programming contests / competitions. (check my achievements)
                 </p>
                 <div style="width: 10%;"></div>
             </div>
@@ -49,9 +56,8 @@
         <div>
             <h1 id="acv" style="text-align: center; font-size: 50px; scroll-margin-top: 100px;">~ Achievements ~</h1>
             <br>
-            <div class="card">
-                <div style="width: 10%;"></div>
-                <p id="" class="glass hvr" style="white-space: pre-line; padding: 2%; width: 70%;font-size: 30px; margin: 0px;"><span style="font-size: 50px;">IRL: </span>
+            <div class="card" style="gap: 2%; padding: 2% 5%">
+                <p id="" class="glass hvr" style="width: 80%; flex: auto; white-space: pre-line; padding: 2%;;font-size: 30px; margin: 0px;"><span style="font-size: 50px;">IRL: </span>
                     - OSN Informatika 2025:
                     <span style="font-size: 20px;">Honorable Mention (#33)</span>
                     - ITS Schematics 2025:
@@ -60,9 +66,8 @@
                     <span style="font-size: 20px;">CPSC: 🥈 2nd Place</span>
                     <span style="font-size: 25px; color: rgb(from var(--m-color) r g b / 0.4);">more...</span>
                 </p>
-                <div style="width: 5%;"></div>
                 <br>
-                <p class="glass deg10 hvr" style="white-space: pre-line; padding: 2%; width: 70%; font-size: 30px; margin: 0px;"><span style="font-size: 50px;">Games: </span>
+                <p class="glass deg10 hvr" style="width: 80%; flex: auto; white-space: pre-line; padding: 2%; font-size: 30px; margin: 0px;"><span style="font-size: 50px;">Games: </span>
                     - Geometry Dash: <span style="font-size: 20px;">
                     Kuzureta hardest.
                     14 extreme demon completed. </span> 
@@ -71,19 +76,44 @@
                     Arsenal: Level 424. </span>
                     <span style="font-size: 25px;color: rgb(from var(--m-color) r g b / 0.4);">more...</span>
                 </p>
-                <div style="width: 10%;"></div>
-            </div>
-            <br><br>
-            
-            <div class="card exempt" style="flex-direction: column;">
-                <a href="achievements.html" style="text-decoration: none;">
-                <button class="glass red-glass hvr" style="padding: 10px 20px; font-size: 25px; ">
-                    View More
-                </button>
-                </a>
             </div>
         </div>
-        <div style="display: block; height: 7vh;"></div>
+        <div style="display:flex; flex-direction: column; align-items: center;">
+            <a href="achievements.html" style="text-decoration: none;">
+            <button class="glass red-glass bhvr" style="padding: 10px 20px; font-size: 25px; ">
+                View More
+            </button>
+            </a>
+        </div>
+            <h1 id="projects" style="text-align: center; font-size: 50px; margin-top: 10%; scroll-margin-top: 100px;">~ Projects ~</h1>
+            <div style="display: flex; align-items: center; justify-content: center; padding-top: 10px; padding-bottom: 10px;">
+                <button id="l_nav" class="glass red-glass" style="cursor: inherit; opacity: 0.2; display: block; height: 200px; width: 5%; font-size: 40px;" onclick="scrollPrev()"><</button>
+                <div id="scrl" class="card exempt scroll" style="width: 70%; padding: 60px 60px; gap: 5%;">
+                    <p class="glass" style="text-align: center; flex: 0 0 90%; white-space: pre-line; padding: 2%; font-size: 30px; margin: 0px;"><span style="font-size: 50px;">2048 Terminal</span>
+                        <span style="font-size: 25px;">2048 in the terminal (with python and curses)</span>
+
+                        <img decoding="async" style="aspect-ratio: 714 / 716; object-fit: contain; width: 20%; border-radius: 15px; margin-bottom: 15px;" src="assets/2048Preview.png">
+                        <a class="glass red-glass bhvr" style="text-align: center; font-size: 100%; padding: 1%;" href="https://github.com/data50090/Terminal-2048">Download</a>
+                    </p>
+                    <p class="glass" style="text-align: center; flex: 0 0 90%; white-space: pre-line; padding: 2%; font-size: 30px;"><span style="font-size: 50px;">Flowcube Wallpaper</span>
+                        <span style="font-size: 25px;">It exists because I was experimenting with particles and it looks cool
+                        so I made it into a wallpaper with a couple of tweaks.</span>
+                        
+                        <img decoding="async" style="aspect-ratio: 16 / 9; object-fit: contain; width: 30%; border-radius: 15px; margin-bottom: 15px;" src="assets/FlowcubePreview.jpg">
+                        <a class="glass red-glass bhvr" style="text-align: center; font-size: 100%; padding: 1%;" href="https://drive.google.com/uc?export=download&id=1Xrhb5wc-VVhG8aa2Ci4pQT1JNp3iMrBt">Download</a>
+                    </p>
+                    <p class="glass" style="text-align: center; flex: 0 0 90%; white-space: pre-line; padding: 2%; font-size: 30px;"><span style="font-size: 50px;">DayNightLine Wallpaper</span>
+                        <span style="font-size: 25px;">Lively Wallpaper I made for fun that can change between day and night with a button.
+                        (Installation instruction in the zip file)</span>
+                        
+                        <img decoding="async" style="aspect-ratio: 16 / 9; object-fit: contain; width: 30%; border-radius: 15px; margin-bottom: 15px;" src="assets/DayNightLinePreview.png">
+                        <a class="glass red-glass bhvr" style="text-align: center; font-size: 100%; padding: 1%;" href="https://drive.google.com/uc?export=download&id=173b4SEkgicjUAqGdk20WoZFd3d2ANZhR">Download</a>
+                    </p>
+                </div>
+                <button id="r_nav" class="glass red-glass bhvr" style="display: block; height: 200px; width: 5%; font-size: 40px;" onclick="scrollNext()">></button>
+            </div>
+            <br><br>
+            <div style="display: block; height: 7vh;"></div>
         <div>
             <h1 id="socials" style="text-align: center; font-size: 50px; scroll-margin-top: 100px;">~ Socials ~</h1>
             <br>
@@ -109,7 +139,14 @@
                 </a><div style="width: 20%;"></div>
             </div>
         </div>
-        <div style="display: block; height: 5vh;"></div>
+        <div style="display: block; height: 20vh;"></div>
+        <div style="display: flex; flex-direction: column; align-items: center; color:var(--m-color); text-align: center;">
+            <p>Made With Love ❤
+            <br>Email: ghifmw@gmail.com
+            <br>(this website is kinda rushed sorry)
+            </p>
+        </div>
+
     </div>
 </body>
 </html>
