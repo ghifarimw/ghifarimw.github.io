@@ -109,6 +109,7 @@ button {
   display: flex;
   overflow-x: auto;
   white-space: nowrap;
+  -webkit-scroll-snap-type: x mandatory; 
   scroll-snap-type: x mandatory;
   scroll-behavior: auto;
   mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
